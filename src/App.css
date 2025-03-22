@@ -36,3 +36,415 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f5f7;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1e3d59;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* padding-top: 30px; */
+  padding: 30px 20px 0px 0px;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 100;
+  transform: translateX(-100%); /* Initially hidden */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide into view */
+}
+
+.sidebar .logo {
+  text-align: center;
+  /* margin-bottom: 10px; */
+  margin: -68px 9px 20px 35px;
+}
+
+.sidebar .logo img {
+  width: 150px;
+}
+
+.sidebar .dashboard-label {
+  color: #1e3d59;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: -50px -20px 30px 28px;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 30px 4px 0px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.sidebar .menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  position: relative;
+  font-weight: 600;
+  margin: 0px 0px 0px 10px;
+}
+
+.sidebar .menu button:hover {
+  background-color: #162e43;
+}
+
+.sidebar .menu button .arrow {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.submenu {
+  display: none;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.submenu li {
+  background-color: #162e43;
+  border-bottom: 1px solid #1e3d59;
+}
+
+.submenu li button {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.submenu li button:hover {
+  background-color: #1e3d59;
+}
+
+/* Header/Nav Bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 67px 4px 70px;;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: -39px 0px 0px -18px;
+  height: 60px;
+}
+
+.header .logo p {
+  margin-left: 40px;
+}
+
+.header .logo img {
+  width: 120px;
+  margin-left: 40px;
+}
+
+.header .icons {
+  display: flex;
+  align-items: center;
+}
+
+.header .icons span {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.header .icons img {
+  /* margin-left: 20px; */
+  width: 28px;
+  cursor: pointer;
+  padding: 20px 20px 20px 4px;
+  /* margin: 0px 0px 0px 20px; */
+}
+
+/* Overlay for Sidebar */
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 50;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+/* Hamburger Menu Button */
+.sidebar-toggle {
+position: absolute;
+left: 40px;
+top: 30px;
+border: none;
+background: none;
+cursor: pointer;
+z-index: 100;
+margin: -20px -21px 0px 26px;
+}
+
+
+.sidebar-toggle .line {
+width: 20px; /* Reduced width for smaller hamburger menu */
+height: 3px; /* Reduced height for the lines */
+background-color: blue;
+margin: 4px 0px; /* Adjusted margin between lines */
+transition: 0.3s;
+}
+
+/* Header/Nav Bar */
+.header .logo p {
+margin-left: 45px;
+font-size: 24px; /* Increased font size */
+font-weight: bold;
+}
+
+.header-icons {
+display: flex;
+align-items: center;
+gap: 8px; /* Space between the icons */
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.main-content.shifted {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+.main-content.full-width {
+  margin-left: 0;
+  width: 100%;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Small blue strip (collapsed sidebar) */
+.collapsed-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: #1e3d59; /* Blue strip color */
+  display: none; /* Initially hidden */
+  z-index: 100; /* Same z-index as sidebar */
+  margin-top: 0px;
+}
+
+.collapsed-sidebar {
+  display: block;
+}
+
+.collapsed-sidebar .collapsed-logo {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.collapsed-sidebar .collapsed-logo img {
+  width: 30px; /* Smaller logo for the collapsed sidebar */
+  height: auto;
+  margin: -12px 0px 10px 0px;
+}
+
+/* Modified main-content when collapsed sidebar is visible */
+.main-content.collapsed-shifted {
+  margin-left: 50px;
+  width: calc(100% - 50px);
+}
+/* Main Content */
+.main-content {
+padding: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+
+
+/* Sidebar submenu */
+.submenu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  /* margin: 10px 0; */
+  margin: 0px 0px 0px 10px;
+}
+
+.submenu.open {
+  display: flex; /* Visible when open class is added */
+}
+
+.submenu li {
+  width: 100%; /* Make items full width */
+  text-align: center;
+}
+
+.submenu li button {
+  background-color: #292b36;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 80%; /* Controls button width */
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px 0px 0px 10px;
+}
+
+.submenu li button:hover {
+  background-color: #40465f;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* margin: 0px 0px 0px 10px; */
+}
+
+
+
+.sidebar .dashboard-label .dashboard-link {
+  color: #1e3d59;  /* Sets the text color to match the rest of the design */
+  text-decoration: none;  /* Removes the underline */
+  font-weight: bold;  /* Makes the text bold */
+  font-size: 18px;  /* Ensures consistent font size */
+}
+
+.sidebar .dashboard-label .dashboard-link:hover {
+  color: #1e3d59;  /* Optional: Changes color on hover */
+  
+}
+
+
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.profile-icon {
+  cursor: pointer;
+  width: 60px; /* Increased size for visibility */
+  height: 28px;
+  border-radius: 50%; /* Make it circular */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  margin-right: -30px;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px -45px 0 0px; /* Add margin for spacing from the icon */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Smooth edges */
+  opacity: 0;
+  transform: translateY(-10px); /* Start position for animation */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade and slide */
+  /* margin: 0px 0px 0px 0px; */
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  /* transform: translateY(0); Slide back to original position */
+  
+}
+
+.dropdown-menu li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease; /* Smooth background change */
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  /* font-weight: bold; */
+  color: #000000;
+  
+  
+}
+
+.dropdown-menu li:hover {
+  background-color: #4979a8; /* Slight hover color change */
+}
+
+.dropdown-menu li a:hover {
+  color: #ffffff; /* Hover effect on text */
+}
+
+

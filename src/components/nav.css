@@ -1,0 +1,221 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* font-family: Red Hat Display; */
+}
+
+.navbar-links-left {
+  display: flex;
+  list-style: none;
+  /* padding 10px 100px 10px 10px 10px; */
+  margin: 0px 0px 0px 60px;
+  font-size: 20px;
+}
+
+.navbar-links-left li {
+  margin-right: 20px;
+}
+
+.navbar-links-left a {
+  color: black;
+  text-decoration: none;
+  /* font-weight: 500; */
+}
+
+.navbar-links-left a:hover {
+  color: #007bff;
+}
+
+.navbar-logo img {
+  width: 250px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 300px;
+}
+
+.navbar-download button {
+  /* padding: 10px 20px; */
+  /* background-color: #007bff; */
+  /* color: white; */
+  /* border: none; */
+  /* border-radius: 20px; */
+  /* cursor: pointer; */
+  /* font-weight: bold; */
+  
+    margin-right: 70px;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #008df5, #005dbe);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0px 8px 16px #b7e0ff;
+}
+
+.navbar-download button:hover {
+  background-color: #0056b3;
+}
+
+/* In your CSS file */
+.mainheading {
+  font-size: 170px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Full viewport height */
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.man {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjust height as needed */
+  margin-top: -120px;
+
+}
+
+.man img {
+  max-width: 100%; /* Keeps the image responsive */
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: white;
+}
+
+.navbar-links-left {
+  display: flex;
+  list-style: none;
+  margin: 0px 0px 0px 60px;
+  font-size: 20px;
+}
+
+.navbar-links-left li {
+  margin-right: 20px;
+}
+
+.navbar-links-left a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-links-left a:hover {
+  color: #007bff;
+}
+
+.navbar-logo img {
+  width: 250px; /* Default size for larger screens */
+  height: auto;
+  margin-right: 300px;
+}
+
+.navbar-download button {
+  margin-right: 70px;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #008df5, #005dbe);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0px 8px 16px #b7e0ff;
+}
+
+.navbar-download button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .navbar-logo img {
+    width: 200px; /* Adjust logo size for medium-large screens */
+    margin-right: 200px;
+  }
+
+  .navbar-links-left {
+    font-size: 18px;
+    margin-left: 40px;
+  }
+
+  .navbar-download button {
+    padding: 12px 35px;
+    font-size: 14px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-logo img {
+    width: 180px; /* Adjust logo size for tablets */
+    margin-right: 150px;
+  }
+
+  .navbar-links-left {
+    font-size: 16px;
+    margin-left: 30px;
+  }
+
+  .navbar-download button {
+    padding: 10px 30px;
+    font-size: 13px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar-links-left {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .navbar-logo img {
+    width: 150px; /* Adjust logo size for smaller tablets */
+    margin: 10px 0;
+  }
+
+  .navbar-download {
+    margin: 10px 0;
+  }
+
+  .navbar-download button {
+    padding: 8px 25px;
+    font-size: 12px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-links-left {
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .navbar-logo img {
+    width: 120px; /* Adjust logo size for mobile devices */
+  }
+
+  .navbar-download button {
+    padding: 6px 20px;
+    font-size: 11px;
+  }
+}
+

@@ -1,0 +1,139 @@
+.document-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: linear-gradient(90deg, #1e90ff, #00aaff);
+  border-radius: 50px;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: left; /* Ensure all text is left-aligned */
+}
+
+.document-content {
+  max-width: 600px;
+  text-align: left; /* Ensure content is left-aligned */
+}
+
+.document-content h3 {
+  font-size: 1.5rem;
+  color: #cce7ff;
+  margin-bottom: 10px;
+  text-align: left; /* Ensure heading is left-aligned */
+}
+
+.document-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* Ensure heading is left-aligned */
+}
+
+.document-content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  text-align: left; /* Ensure paragraph is left-aligned */
+}
+
+.read-more-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left; /* Ensure button text is left-aligned */
+}
+
+.read-more-button:hover {
+  background-color: white;
+  color: #1e90ff;
+}
+
+.document-image img {
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 0px -200px 0px 0px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .document-section {
+    padding: 40px;
+    max-width: 900px;
+  }
+
+  .document-image img {
+    width: 350px;
+    height: 300px;
+    margin: 0px -150px 0px 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .document-section {
+    flex-direction: column;
+    text-align: left; /* Ensure text remains left-aligned in column layout */
+    padding: 30px;
+    max-width: 700px;
+  }
+
+  .document-content {
+    max-width: 100%;
+  }
+
+  .document-image img {
+    width: 300px;
+    height: 250px;
+    margin: 20px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .document-section {
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 30px;
+  }
+
+  .document-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .document-image img {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .document-section {
+    padding: 15px;
+    max-width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .document-content h1 {
+    font-size: 2rem;
+  }
+
+  .document-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .document-content p {
+    font-size: 0.9rem;
+  }
+
+  .document-image img {
+    width: 200px;
+    height: 150px;
+  }
+}

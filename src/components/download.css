@@ -1,0 +1,255 @@
+/* Download Section Styles */
+.download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .download-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1459px;
+    background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+    padding: 30px;
+    border-radius: 30px;
+    margin: 60px 0 30px;
+  }
+  
+  .download-banner h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .download-button1 {
+    padding: 15px 35px;
+    background: linear-gradient(90deg, #008df5, #005dbe);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .banner-download-button, .download-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .download-box {
+    background: linear-gradient(90deg, #bcd8eb, #f1f1f1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 100px;
+  }
+  
+  .product-logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .download-box h1 {
+    font-size: 3.5rem;
+    color: #000000;
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+  
+  .download-box p {
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .platform-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .platform-icons img {
+    width: 40px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .download-banner {
+      padding: 25px;
+      margin: 50px 0 25px;
+    }
+  
+    .download-banner h2 {
+      font-size: 1.3rem;
+    }
+  
+    .download-box {
+      padding: 30px;
+      max-width: 1000px;
+    }
+  
+    .download-box h1 {
+      font-size: 3rem;
+    }
+  
+    .download-box p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .download-banner {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      margin: 40px 0 20px;
+    }
+  
+    .download-banner h2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .download-box {
+      padding: 25px;
+      max-width: 800px;
+    }
+  
+    .download-box h1 {
+      font-size: 2.5rem;
+    }
+  
+    .download-box p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .download-banner {
+      padding: 15px;
+      margin: 30px 0 15px;
+    }
+  
+    .download-banner h2 {
+      font-size: 1rem;
+    }
+  
+    .download-box {
+      padding: 20px;
+      max-width: 600px;
+    }
+  
+    .download-box h1 {
+      font-size: 2rem;
+    }
+  
+    .download-box p {
+      font-size: 0.8rem;
+    }
+  
+    .download-button1 {
+      padding: 12px 30px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .download-banner {
+      padding: 10px;
+      margin: 20px 0 10px;
+    }
+  
+    .download-banner h2 {
+      font-size: 0.9rem;
+    }
+  
+    .download-box {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    .download-box h1 {
+      font-size: 1.5rem;
+    }
+  
+    .download-box p {
+      font-size: 0.75rem;
+    }
+  
+    .download-button1 {
+      padding: 10px 25px;
+      font-size: 11px;
+    }
+  
+    .product-logo {
+      width: 60px;
+    }
+  }
+
+  .download-banner {
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide overflow to create the scrolling effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+    padding: 20px 225px; /* Adjust padding as needed */
+    margin: 60px 0 30px;
+    position: relative;
+  }
+  
+  .banner-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollBanner 20s linear infinite; /* Adjust animation duration as needed */
+  }
+  
+  .banner-content h2 {
+    display: inline-block;
+    color: black;
+    font-size: 1.5rem;
+    margin: 0 20px; /* Add spacing between text and buttons */
+  }
+  
+  .banner-download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 20px; /* Add spacing between buttons and text */
+  }
+  
+  /* Keyframes for the infinite scroll animation */
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(0%); /* Start from the original position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move to the left by 50% (half of the content width) */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .banner-content h2 {
+      font-size: 1.2rem;
+    }
+    .banner-download-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }

@@ -1,0 +1,75 @@
+.tutorial-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center align the content */
+}
+
+.tutorial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.tutorial-section .highlight {
+  color: #007bff; /* Highlight color for "Tutorials" */
+}
+
+.tutorial-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 600px; /* Limit the width of the description */
+  line-height: 1.6; /* Improve readability */
+}
+
+.see-all-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.see-all-button:hover {
+  background-color: #0056b3; /* Darken button on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tutorial-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .tutorial-description {
+    font-size: 0.9rem;
+  }
+
+  .see-all-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tutorial-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .tutorial-description {
+    font-size: 0.8rem;
+  }
+
+  .see-all-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

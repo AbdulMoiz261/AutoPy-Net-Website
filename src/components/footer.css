@@ -1,0 +1,143 @@
+.custom-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.custom-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-logo {
+  margin-top: 40px;
+  width: 500px; /* Default size for larger screens */
+}
+
+.custom-navbar {
+  margin-top: 20px;
+}
+
+.custom-nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.custom-nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.custom-nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .custom-logo {
+    width: 400px; /* Slightly smaller logo for medium-large screens */
+  }
+
+  .custom-nav-links {
+    gap: 30px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-logo {
+    width: 350px; /* Adjust logo size for tablets */
+  }
+
+  .custom-nav-links {
+    gap: 25px;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-logo {
+    width: 300px; /* Smaller logo for smaller tablets */
+  }
+
+  .custom-nav-links {
+    gap: 20px;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-logo {
+    width: 250px; /* Adjust logo size for mobile devices */
+    margin-top: 20px;
+  }
+
+  .custom-nav-links {
+    flex-direction: column; /* Stack links vertically on small screens */
+    gap: 15px;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .custom-footer {
+    padding: 15px; /* Reduce padding for smaller screens */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  /* Ensure the container is centered and constrained */
+.container {
+  max-width: 1200px; /* Adjust this value based on your design */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding to prevent content from touching the edges */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 100%; /* Allow the container to take full width */
+    padding: 0 40px; /* Increase padding to prevent content from touching the edges */
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px; /* Adjust padding for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px; /* Adjust padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px; /* Adjust padding for smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px; /* Adjust padding for mobile devices */
+  }
+}
+}
