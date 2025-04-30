@@ -53,21 +53,19 @@ curl -LO https://autopynet.com/download/linux
 - Video Tutorials
 
 ## 🛠 Support
-- For help, visit our:
-- Help Center
 - Contact: +92 3313134953
 - E-mail: abdulmoiznoman08@gmail.com
 
 AutoPyNet v2024 | Website | Terms
 
-This version:
-1. Clearly connects the website and desktop app
-2. Uses consistent formatting throughout
-3. Provides parallel feature comparison
-4. Includes all essential sections
-5. Maintains clean Markdown syntax
-6. Adds proper linking between resources
-7. Includes both web and CLI references
+- This version:
+  1. Clearly connects the website and desktop app
+  2. Uses consistent formatting throughout
+  3. Provides parallel feature comparison
+  4. Includes all essential sections
+  5. Maintains clean Markdown syntax
+  6. Adds proper linking between resources
+  7. Includes both web and CLI references
 
 
 
